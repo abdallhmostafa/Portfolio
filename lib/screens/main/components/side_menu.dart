@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/constants.dart';
-import 'package:portfolio/theme/app_style.dart';
 
 import 'area_info_text.dart';
 import 'coding.dart';
@@ -16,50 +14,50 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       child: SafeArea(
         child: Column(
           children: [
-            const MyInfo(),
+            MyInfo(),
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.all(AppConstant.defaultPadding),
+                padding: EdgeInsets.all(AppConstant.defaultPadding),
                 child: Column(
                   children: [
-                    const AreaInfoText(
+                    AreaInfoText(
                       title: "Residence",
                       text: "Egypt",
                     ),
-                    const AreaInfoText(
+                    AreaInfoText(
                       title: "City",
                       text: "Alexandria",
                     ),
-                    const AreaInfoText(
+                    AreaInfoText(
                       title: "Age",
                       text: "23",
                     ),
-                    const Skills(),
-                    const SizedBox(height: AppConstant.defaultPadding),
-                    const Coding(),
-                    const Knowledges(),
-                    const Divider(),
-                    const SizedBox(height: AppConstant.defaultPadding / 2),
-                    TextButton(
-                      onPressed: () {},
-                      child: FittedBox(
-                        child: Row(
-                          children: [
-                            const Text(
-                              "DOWNLOAD CV",
-                              style: AppStyle.f18White,
-                            ),
-                            const SizedBox(
-                                width: AppConstant.defaultPadding / 2),
-                            SvgPicture.asset("assets/icons/download.svg")
-                          ],
-                        ),
-                      ),
-                    ),
+                    Skills(),
+                    SizedBox(height: AppConstant.defaultPadding),
+                    Coding(),
+                    Knowledges(),
+                    Divider(),
+                    SizedBox(height: AppConstant.defaultPadding / 2),
+                    // TextButton(
+                    //   onPressed: () {},
+                    //   child: FittedBox(
+                    //     child: Row(
+                    //       children: [
+                    //         const Text(
+                    //           "DOWNLOAD CV",
+                    //           style: AppStyle.f18White,
+                    //         ),
+                    //         const SizedBox(
+                    //             width: AppConstant.defaultPadding / 2),
+                    //         SvgPicture.asset("assets/icons/download.svg")
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

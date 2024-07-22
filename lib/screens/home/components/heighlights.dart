@@ -16,8 +16,9 @@ class HighLightsInfo extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
           vertical: AppConstant.defaultPadding,
           horizontal: AppConstant.defaultPadding * 2),
-      child: Responsive.isMobileLarge(context)
+      child: !Responsive.isMobileLarge(context)
           ? const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,8 +61,7 @@ class HighLightsInfo extends StatelessWidget {
                 ),
               ],
             )
-          : const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          : const Column(
               children: [
                 HeighLight(
                   counter: AnimatedCounter(

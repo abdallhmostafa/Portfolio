@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive.dart';
 
 import '../../../constants.dart';
 
@@ -18,7 +19,11 @@ class HeighLight extends StatelessWidget {
       children: [
         counter,
         const SizedBox(width: AppConstant.defaultPadding / 2),
-        Text(label!, style: Theme.of(context).textTheme.titleSmall),
+        Responsive.isMobileSmall(context)
+            ? Flexible(
+                child:
+                    Text(label!, style: Theme.of(context).textTheme.titleSmall))
+            : Text(label!, style: Theme.of(context).textTheme.titleSmall),
       ],
     );
   }

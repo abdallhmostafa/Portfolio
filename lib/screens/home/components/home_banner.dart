@@ -1,6 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/url_luncher.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/screens/home/components/bg_slider_banner.dart';
 
 import '../../../constants.dart';
 
@@ -12,15 +14,14 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
+      aspectRatio: Responsive.isMobile(context)
+          ? (Responsive.isMobileSmall(context) ? 1.3 : 2.1)
+          : 3,
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(
-            "assets/images/bg_2.jpg",
-            fit: BoxFit.cover,
-          ),
-          Container(color: AppConstant.darkColor.withOpacity(0.66)),
+          const BgSliderBanner(),
+          Container(color: const Color.fromRGBO(25, 25, 35, 0.6)),
           Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: AppConstant.defaultPadding),
@@ -46,7 +47,13 @@ class HomeBanner extends StatelessWidget {
                 const SizedBox(height: AppConstant.defaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      urlLauncher(Uri(
+                        scheme: 'https',
+                        host: 'www.linkedin.com',
+                        path: 'in/abdallh-mostafa-elrabiey',
+                      ));
+                    },
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
                           horizontal: AppConstant.defaultPadding * 2,
@@ -85,7 +92,7 @@ class MyBuildAnimatedText extends StatelessWidget {
             const SizedBox(width: AppConstant.defaultPadding / 2),
           const Text("I build "),
           Responsive.isMobile(context)
-              ? const Expanded(child: AnimatedText())
+              ? const Expanded(child: AnimatedText(isMobile: true))
               : const AnimatedText(),
           if (!Responsive.isMobileLarge(context))
             const SizedBox(width: AppConstant.defaultPadding / 2),
@@ -99,24 +106,33 @@ class MyBuildAnimatedText extends StatelessWidget {
 class AnimatedText extends StatelessWidget {
   const AnimatedText({
     super.key,
+    this.isMobile = false,
   });
-
+  final bool isMobile;
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
       animatedTexts: [
-        TyperAnimatedText(
-          "Responsive Mobile Apps.",
-          speed: const Duration(milliseconds: 60),
-        ),
-        TyperAnimatedText(
-          "Complete Midical App with REST Api, Cubit, Localization, CI/CD, Auth,Caching, & Google Maps.",
-          speed: const Duration(milliseconds: 80),
-        ),
-        TyperAnimatedText(
-          "Chat app with Firebase services & storage.",
-          speed: const Duration(milliseconds: 60),
-        ),
+        TyperAnimatedText("Responsive Mobile Apps.",
+            speed: const Duration(milliseconds: 60),
+            textStyle: isMobile
+                ? const TextStyle(color: AppConstant.primaryColor)
+                : null),
+        TyperAnimatedText("Complete Midical App",
+            speed: const Duration(milliseconds: 80),
+            textStyle: isMobile
+                ? const TextStyle(color: AppConstant.primaryColor)
+                : null),
+        TyperAnimatedText("Chat app",
+            speed: const Duration(milliseconds: 60),
+            textStyle: isMobile
+                ? const TextStyle(color: AppConstant.primaryColor)
+                : null),
+        TyperAnimatedText("E-commerce App",
+            speed: const Duration(milliseconds: 60),
+            textStyle: isMobile
+                ? const TextStyle(color: AppConstant.primaryColor)
+                : null),
       ],
     );
   }

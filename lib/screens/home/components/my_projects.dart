@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/responsive.dart';
 
-
 import '../../../constants.dart';
 import 'project_card.dart';
 
@@ -21,14 +20,17 @@ class MyProjects extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         const SizedBox(height: AppConstant.defaultPadding),
-        const Responsive(
+        Responsive(
           mobile: ProjectsGridView(
             crossAxisCount: 1,
-            childAspectRatio: 1.7,
+            childAspectRatio: Responsive.isMobileSmall(context) ? 1.1 : 1.7,
           ),
-          mobileLarge: ProjectsGridView(crossAxisCount: 2),
-          tablet: ProjectsGridView(childAspectRatio: 1.1),
-          desktop: ProjectsGridView(),
+          mobileLarge:
+              const ProjectsGridView(crossAxisCount: 2, childAspectRatio: 1.1),
+          tablet: const ProjectsGridView(childAspectRatio: 1.0),
+          desktop: const ProjectsGridView(
+            childAspectRatio: 1.6,
+          ),
         )
       ],
     );

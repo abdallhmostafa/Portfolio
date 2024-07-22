@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/url_luncher.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/theme/app_style.dart';
@@ -36,7 +37,13 @@ class ProjectCard extends StatelessWidget {
           ),
           const Spacer(),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              urlLauncher(Uri(
+                scheme: 'https',
+                host: 'www.github.com',
+                path: project.link ?? '',
+              ));
+            },
             child: const Text(
               "Read More >>",
               style: TextStyle(color: AppConstant.primaryColor),
