@@ -23,13 +23,13 @@ class MyProjects extends StatelessWidget {
         Responsive(
           mobile: ProjectsGridView(
             crossAxisCount: 1,
-            childAspectRatio: Responsive.isMobileSmall(context) ? 1.1 : 1.7,
+            childAspectRatio: Responsive.isMobileSmall(context) ? 0.5 : 0.6,
           ),
           mobileLarge:
-              const ProjectsGridView(crossAxisCount: 2, childAspectRatio: 1.1),
-          tablet: const ProjectsGridView(childAspectRatio: 1.0),
+              const ProjectsGridView(childAspectRatio: 0.6, crossAxisCount: 1),
+          tablet: const ProjectsGridView(childAspectRatio: 0.6),
           desktop: const ProjectsGridView(
-            childAspectRatio: 1.6,
+            childAspectRatio: 0.6,
           ),
         )
       ],
@@ -40,7 +40,7 @@ class MyProjects extends StatelessWidget {
 class ProjectsGridView extends StatelessWidget {
   const ProjectsGridView({
     super.key,
-    this.crossAxisCount = 3,
+    this.crossAxisCount = 2,
     this.childAspectRatio = 1.3,
   });
 

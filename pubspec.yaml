@@ -30,6 +30,13 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/gifs/
+    - assets/images/project_1/
+    - assets/images/project_2/
+    - assets/images/project_3/
+    - assets/images/project_4/
+    - assets/images/project_5/
+    - assets/images/project_6/
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

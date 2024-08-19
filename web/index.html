@@ -15,7 +15,8 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <!-- <base href="$FLUTTER_BASE_HREF"> -->
+  <!--  $Flutter_BASE_HE -->
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -32,10 +33,38 @@
 
   <title>⚡Abdallh Mostafa elRabiey⚡</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    .indicator {
+      width: 30vw;
+    }
+  </style>
 </head>
 
-<body>
+<body style="overflow: hidden;">
+  <div id="loading_indicator" class="container">
+    <img src="./asstes/asstes/loading_2.gif" alt="Loading..." class="indicator">
+
+  </div>
   <script src="flutter_bootstrap.js" async></script>
+  <script>
+    window.onload = function () {
+      setTimeout(function ()  {
+        var loading_indicator = document.getElementById('loading_indicator');
+        if (loading_indicator) {
+          loading_indicator.remove();
+        }
+      }, 7000);
+    };
+  </script>
 </body>
 
 </html>

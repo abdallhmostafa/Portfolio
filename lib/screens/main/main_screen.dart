@@ -29,7 +29,7 @@ class MainScreen extends StatelessWidget {
       drawer: const SideMenu(),
       body: Center(
         child: Container(
-          constraints: const BoxConstraints(maxWidth:AppConstant.maxWidth),
+          constraints: const BoxConstraints(maxWidth: AppConstant.maxWidth),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -43,10 +43,7 @@ class MainScreen extends StatelessWidget {
                 flex: 7,
                 child: SingleChildScrollView(
                   child: Column(
-                    children: [
-                      ...children,
-                      // our footer
-                    ],
+                    children: children,
                   ),
                 ),
               ),

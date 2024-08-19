@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/animated_progress_indicator.dart';
+import 'package:portfolio/components/animated_counter.dart';
+import 'package:portfolio/screens/home/components/heigh_light.dart';
 import 'package:portfolio/theme/app_style.dart';
 
 import '../../../constants.dart';
@@ -22,30 +23,28 @@ class Skills extends StatelessWidget {
             style: AppStyle.f18White,
           ),
         ),
-        Row(
-          children: [
-            Expanded(
-              child: AnimatedCircularProgressIndicator(
-                percentage: 0.8,
-                label: "Flutter",
-              ),
-            ),
-            SizedBox(width: AppConstant.defaultPadding),
-            Expanded(
-              child: AnimatedCircularProgressIndicator(
-                percentage: 0.69,
-                label: "Firebase",
-              ),
-            ),
-            SizedBox(width: AppConstant.defaultPadding),
-            Expanded(
-              child: AnimatedCircularProgressIndicator(
-                percentage: 0.85,
-                label: "Teaching",
-              ),
-            ),
-          ],
+        HeighLight(
+          counter: AnimatedCounter(
+            value: 2,
+            text: "+",
+          ),
+          label: "Teaching years",
         ),
+        HeighLight(
+          counter: AnimatedCounter(
+            value: 2,
+            text: "+",
+          ),
+          label: "Flutter Developer years",
+        ),
+        HeighLight(
+          counter: AnimatedCounter(
+            value: 4,
+            text: "+",
+          ),
+          label: "Coding years",
+        ),
+   
       ],
     );
   }

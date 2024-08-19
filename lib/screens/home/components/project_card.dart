@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/components/url_luncher.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/screens/home/components/project_slider_card.dart';
 import 'package:portfolio/theme/app_style.dart';
 
 import '../../../constants.dart';
@@ -29,12 +30,14 @@ class ProjectCard extends StatelessWidget {
             style: AppStyle.f18White,
           ),
           const Spacer(),
-          Text(
+          SelectableText(
             project.description!,
             maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
-            overflow: TextOverflow.ellipsis,
+            
             style: const TextStyle(height: 1.5),
           ),
+          const Spacer(),
+           ProjectSliderCard(projectImage: project.images),
           const Spacer(),
           TextButton(
             onPressed: () {

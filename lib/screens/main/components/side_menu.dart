@@ -8,9 +8,7 @@ import 'my_info.dart';
 import 'skills.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({
-    super.key,
-  });
+  const SideMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +38,8 @@ class SideMenu extends StatelessWidget {
                     SizedBox(height: AppConstant.defaultPadding),
                     Coding(),
                     Knowledges(),
-                    Divider(),
-                    SizedBox(height: AppConstant.defaultPadding / 2),
+                    // Divider(),
+                    // SizedBox(height: AppConstant.defaultPadding / 2),
                     // TextButton(
                     //   onPressed: () {},
                     //   child: FittedBox(
