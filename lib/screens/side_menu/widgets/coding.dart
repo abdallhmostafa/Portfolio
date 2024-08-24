@@ -30,7 +30,7 @@ class Coding extends StatelessWidget {
               animatedTexts: _skills.map((e) {
                 return TyperAnimatedText(
                   e,
-                  speed: const Duration(milliseconds: 250),
+                  speed: const Duration(milliseconds: 100),
                   textStyle: const TextStyle(
                       color: AppConstant.primaryColor, fontSize: 24),
                 );
@@ -57,5 +57,4 @@ const List<String> _skills = [
   "Algorithms",
   "Design Patterns",
   "Problem Solving",
-  
 ];

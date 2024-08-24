@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_counter.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/screens/leading/heighlights_section/widgets/heighlight_text.dart';
 
 import '../../../constants.dart';
-import 'heigh_light.dart';
 
 class HighLightsInfo extends StatelessWidget {
-  const HighLightsInfo({
-    super.key,
-  });
+  const HighLightsInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +21,14 @@ class HighLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    HeighLight(
+                    HeighlightText(
                       counter: AnimatedCounter(
                         value: 800,
                         text: "+",
                       ),
                       label: "Connections in LinkedIn",
                     ),
-                    HeighLight(
+                    HeighlightText(
                       counter: AnimatedCounter(
                         value: 8,
                         text: "+",
@@ -43,14 +41,14 @@ class HighLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    HeighLight(
+                    HeighlightText(
                       counter: AnimatedCounter(
                         value: 8,
                         text: "+",
                       ),
                       label: "GitHub Projects",
                     ),
-                    HeighLight(
+                    HeighlightText(
                       counter: AnimatedCounter(
                         value: 2,
                         text: "+",
@@ -63,28 +61,28 @@ class HighLightsInfo extends StatelessWidget {
             )
           : const Column(
               children: [
-                HeighLight(
+                HeighlightText(
                   counter: AnimatedCounter(
                     value: 800,
                     text: "+",
                   ),
                   label: "Connections in LinkedIn",
                 ),
-                HeighLight(
+                HeighlightText(
                   counter: AnimatedCounter(
                     value: 8,
                     text: "+",
                   ),
                   label: "Posts in LinkedIn",
                 ),
-                HeighLight(
+                HeighlightText(
                   counter: AnimatedCounter(
                     value: 8,
                     text: "+",
                   ),
                   label: "GitHub Projects",
                 ),
-                HeighLight(
+                HeighlightText(
                   counter: AnimatedCounter(
                     value: 2,
                     text: "+",

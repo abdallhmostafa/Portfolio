@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants.dart';
 
-import 'area_info_text.dart';
-import 'coding.dart';
-import 'knowledges.dart';
-import 'my_info.dart';
-import 'skills.dart';
+import 'widgets/area_info_text.dart';
+import 'widgets/coding.dart';
+import 'widgets/knowledges.dart';
+import 'widgets/my_info.dart';
+import 'widgets/skills.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
@@ -13,12 +13,14 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Drawer(
+      shape: ContinuousRectangleBorder(),
       child: SafeArea(
         child: Column(
           children: [
             MyInfo(),
             Expanded(
               child: SingleChildScrollView(
+                
                 padding: EdgeInsets.all(AppConstant.defaultPadding),
                 child: Column(
                   children: [
@@ -56,6 +58,7 @@ class SideMenu extends StatelessWidget {
                     //     ),
                     //   ),
                     // ),
+                    SizedBox(height: 10),
                   ],
                 ),
               ),

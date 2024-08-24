@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_counter.dart';
-import 'package:portfolio/screens/home/components/heigh_light.dart';
+import 'package:portfolio/screens/leading/heighlights_section/widgets/heighlight_text.dart';
 import 'package:portfolio/theme/app_style.dart';
 
 import '../../../constants.dart';
@@ -23,21 +23,21 @@ class Skills extends StatelessWidget {
             style: AppStyle.f18White,
           ),
         ),
-        HeighLight(
+        HeighlightText(
           counter: AnimatedCounter(
             value: 2,
             text: "+",
           ),
           label: "Teaching years",
         ),
-        HeighLight(
+        HeighlightText(
           counter: AnimatedCounter(
             value: 2,
             text: "+",
           ),
           label: "Flutter Developer years",
         ),
-        HeighLight(
+        HeighlightText(
           counter: AnimatedCounter(
             value: 4,
             text: "+",

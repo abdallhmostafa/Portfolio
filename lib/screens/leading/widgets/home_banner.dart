@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/url_luncher.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/screens/home/components/bg_slider_banner.dart';
+import 'package:portfolio/screens/leading/widgets/bg_slider_banner.dart';
 
 import '../../../constants.dart';
 
@@ -21,7 +21,13 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           const BgSliderBanner(),
-          Container(color: const Color.fromRGBO(25, 25, 35, 0.6)),
+          const DecoratedBox(
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(25, 25, 35, 0.6),
+              borderRadius:
+                  BorderRadius.all(Radius.circular(AppConstant.defaultRadius)),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: AppConstant.defaultPadding),
@@ -75,9 +81,7 @@ class HomeBanner extends StatelessWidget {
 }
 
 class MyBuildAnimatedText extends StatelessWidget {
-  const MyBuildAnimatedText({
-    super.key,
-  });
+  const MyBuildAnimatedText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -104,10 +108,7 @@ class MyBuildAnimatedText extends StatelessWidget {
 }
 
 class AnimatedText extends StatelessWidget {
-  const AnimatedText({
-    super.key,
-    this.isMobile = false,
-  });
+  const AnimatedText({super.key, this.isMobile = false});
   final bool isMobile;
   @override
   Widget build(BuildContext context) {
@@ -139,9 +140,7 @@ class AnimatedText extends StatelessWidget {
 }
 
 class FlutterCodedText extends StatelessWidget {
-  const FlutterCodedText({
-    super.key,
-  });
+  const FlutterCodedText({super.key});
 
   @override
   Widget build(BuildContext context) {

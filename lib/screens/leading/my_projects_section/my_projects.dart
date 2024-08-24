@@ -3,12 +3,10 @@ import 'package:portfolio/models/project.dart';
 import 'package:portfolio/responsive.dart';
 
 import '../../../constants.dart';
-import 'project_card.dart';
+import 'widgets/project_card.dart';
 
 class MyProjects extends StatelessWidget {
-  const MyProjects({
-    super.key,
-  });
+  const MyProjects({super.key});
 
   @override
   Widget build(BuildContext context) {

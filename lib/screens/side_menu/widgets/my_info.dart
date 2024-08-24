@@ -49,6 +49,7 @@ class MyInfo extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             IconButton(
+                              padding: EdgeInsets.zero,
                               onPressed: () {
                                 urlLauncher(Uri(
                                   scheme: 'https',
@@ -57,7 +58,8 @@ class MyInfo extends StatelessWidget {
                                 ));
                               },
                               icon: SvgPicture.asset(
-                                  "assets/icons/linkedon_svg.svg"),
+                                "assets/icons/linkedon_svg.svg",
+                              ),
                             ),
                             IconButton(
                               onPressed: () {

@@ -22,7 +22,13 @@ class AreaInfoText extends StatelessWidget {
             title!,
             style: const TextStyle(color: Colors.white),
           ),
-          Text(text!),
+          Flexible(
+            child: Text(
+              text!,
+              // maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
         ],
       ),
     );

@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/components/url_luncher.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/responsive.dart';
-import 'package:portfolio/screens/home/components/project_slider_card.dart';
+import 'package:portfolio/screens/leading/my_projects_section/widgets/project_slider_card.dart';
 import 'package:portfolio/theme/app_style.dart';
 
-import '../../../constants.dart';
+import '../../../../constants.dart';
 
 class ProjectCard extends StatelessWidget {
-  const ProjectCard({
-    super.key,
-    required this.project,
-  });
+  const ProjectCard({super.key, required this.project});
 
   final Project project;
 
@@ -19,7 +16,11 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(AppConstant.defaultPadding),
-      color: AppConstant.secondaryColor,
+      decoration: const BoxDecoration(
+        color: AppConstant.secondaryColor,
+        borderRadius:
+            BorderRadius.all(Radius.circular(AppConstant.defaultRadius)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,11 +34,10 @@ class ProjectCard extends StatelessWidget {
           SelectableText(
             project.description!,
             maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
-            
             style: const TextStyle(height: 1.5),
           ),
           const Spacer(),
-           ProjectSliderCard(projectImage: project.images),
+          ProjectSliderCard(projectImage: project.images),
           const Spacer(),
           TextButton(
             onPressed: () {

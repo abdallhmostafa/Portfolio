@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/responsive.dart';
 
-import '../../../constants.dart';
+import '../../../../constants.dart';
 
-class HeighLight extends StatelessWidget {
-  const HeighLight({
+class HeighlightText extends StatelessWidget {
+  const HeighlightText({
     super.key,
     required this.counter,
     this.label,
