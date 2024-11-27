@@ -1,21 +1,22 @@
 # 🌟 Abdallah Mostafa's Portfolio
-### 🎉 Welcome to my personal portfolio website! This portfolio is built using Flutter Web to showcase my skills, projects, and professional journey in software development.
+### 🎉 Welcome to my personal portfolio website! 
+- This portfolio is built using Flutter Web to showcase my skills, projects, and professional journey in software development.
 
 ## 📋 Features
 ### ✨ Here's what makes this portfolio stand out:
-🎨 Responsive Design: Looks great on desktop and mobile.
-⚡ Interactive Sections: Projects, Skills, and Contact me for easy navigation.
-🌐 Hosted on GitHub Pages: Accessible from anywhere!
+- 🎨 Responsive Design: Looks great on desktop and mobile.
+- ⚡ Interactive Sections: Projects, Skills, and Contact me for easy navigation.
+- 🌐 Hosted on GitHub Pages: Accessible from anywhere!
 
 ## 🛠️ Technologies Used
 ### 🔧 Built with the following tools:
-🖥️ Flutter Web
-💻 Dart
-☁️ GitHub Pages
+- 🖥️ Flutter Web
+- 💻 Dart
+- ☁️ GitHub Pages
 
 ## 🏗️ How to Run Locally
 1- Clone the repository 🖱️:
- git clone https://github.com/username/repository-name.git in bash
+git clone [https://github.com/username/repository-name.git](https://github.com/abdallhmostafa/Portfolio.git) in bash
  
 2- Navigate to the project folder 📂:
 cd repository-name in bash
@@ -40,7 +41,7 @@ Feel free to reach out if you have any questions or opportunities:
 
 ## 🏆 Future Improvements
 ### 💡 Some planned updates:
-🌗 Add dark mode support.
-📂 Include downloadable Resume/CV.
-✨ Integrate Google Analytics for visitor tracking.
+- 🌗 Add dark mode support.
+- 📂 Include downloadable Resume/CV.
+- ✨ Integrate Google Analytics for visitor tracking.
 
