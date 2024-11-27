@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -14,25 +15,87 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="$FLUTTER_BASE_HREF">
-
+  <!--  $Flutter_BASE_HE -->
+  <base href="/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Abdallh Mostafa elRabiey">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="Abdallh Mostafa elRabiey,elRabiey,Abdallh Mostafa,portfolio,Eng.Abdallh Mostafe,flutter,flutter developer,junior flutter developer">
+  <meta name=" author" content="Abdallh Mostafa elRabiey">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="3 month">
+  <meta name="language" content="English">
+  <meta name="generator" content="Abdallh Mostafa elRabiey">
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+
+  <meta property="og:title" content="Abdallh Mostafa elRabiey">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abdallhmostafa.github.io/">
+  <meta property="og:image" content="icons/Icon-192.png">
+  <meta property="og:description" content="Portfolio of Eng.Abdallh Mostafa elRabiey">
+  <meta property="og:site_name" content="Abdallh Mostafa elRabiey">
+  <meta property="og:locale" content="en_US">
+
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <meta name="apple-mobile-web-app-title" content="Abdallh Mostafa elRabiey">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="apple-touch-startup-image" href="icons/Icon-192.png">
+
+  <!-- Android meta tags & icons -->
+  <meta name="theme-color" content="#000000">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Abdallh Mostafa elRabiey">
+  <link rel="icon" sizes="192x192" href="icons/Icon-192.png">
+
+
+  <!-- Windows meta tags & icons -->
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="icons/Icon-192.png">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>portfolio</title>
+  <title>⚡Abdallh Mostafa elRabiey⚡</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    .indicator {
+      width: 30vw;
+    }
+  </style>
 </head>
-<body>
+
+<body style="overflow: hidden;background-color: black;">
+  <div id="loading_indicator" class="container">
+    <img src="./asstes/asstes/loading_2.gif" alt="Loading..." class="indicator">
+
+  </div>
   <script src="flutter_bootstrap.js" async></script>
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        var loading_indicator = document.getElementById('loading_indicator');
+        if (loading_indicator) {
+          loading_indicator.remove();
+        }
+      }, 10000);
+    };
+  </script>
 </body>
+
 </html>
