@@ -20,7 +20,6 @@ class SideMenu extends StatelessWidget {
             MyInfo(),
             Expanded(
               child: SingleChildScrollView(
-                
                 padding: EdgeInsets.all(AppConstant.defaultPadding),
                 child: Column(
                   children: [
@@ -58,7 +57,6 @@ class SideMenu extends StatelessWidget {
                     //     ),
                     //   ),
                     // ),
-                    SizedBox(height: 10),
                   ],
                 ),
               ),

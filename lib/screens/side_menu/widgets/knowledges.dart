@@ -36,10 +36,7 @@ class Knowledges extends StatelessWidget {
 }
 
 class KnowledgeText extends StatelessWidget {
-  const KnowledgeText({
-    super.key,
-    required this.text,
-  });
+  const KnowledgeText({super.key, required this.text});
 
   final String text;
 
