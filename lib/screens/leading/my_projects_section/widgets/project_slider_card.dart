@@ -28,7 +28,7 @@ class ProjectSliderCard extends StatelessWidget {
           Image.asset(
         projectImage[itemIndex],
         filterQuality: FilterQuality.high,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
       ),
     );
   }

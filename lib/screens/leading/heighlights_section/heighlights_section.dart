@@ -23,14 +23,14 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighlightText(
                       counter: AnimatedCounter(
-                        value: 800,
+                        value: 1000,
                         text: "+",
                       ),
                       label: "Connections in LinkedIn",
                     ),
                     HeighlightText(
                       counter: AnimatedCounter(
-                        value: 8,
+                        value: 9,
                         text: "+",
                       ),
                       label: "Posts in LinkedIn",
@@ -43,7 +43,7 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighlightText(
                       counter: AnimatedCounter(
-                        value: 8,
+                        value: 9,
                         text: "+",
                       ),
                       label: "GitHub Projects",
@@ -63,21 +63,21 @@ class HighLightsInfo extends StatelessWidget {
               children: [
                 HeighlightText(
                   counter: AnimatedCounter(
-                    value: 800,
+                    value: 1000,
                     text: "+",
                   ),
                   label: "Connections in LinkedIn",
                 ),
                 HeighlightText(
                   counter: AnimatedCounter(
-                    value: 8,
+                    value: 9,
                     text: "+",
                   ),
                   label: "Posts in LinkedIn",
                 ),
                 HeighlightText(
                   counter: AnimatedCounter(
-                    value: 8,
+                    value: 9,
                     text: "+",
                   ),
                   label: "GitHub Projects",

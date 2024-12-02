@@ -24,8 +24,10 @@ class HomeBanner extends StatelessWidget {
           const DecoratedBox(
             decoration: BoxDecoration(
               color: Color.fromRGBO(25, 25, 35, 0.6),
-              borderRadius:
-                  BorderRadius.all(Radius.circular(AppConstant.defaultRadius)),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(AppConstant.defaultRadius),
+                bottomLeft: Radius.circular(AppConstant.defaultRadius),
+              ),
             ),
           ),
           Padding(
